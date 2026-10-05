@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUST</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Pantalla Principal -->
+        <div id="screen-main" class="screen active">
+            <header>
+                <h1>CRUST</h1>
+                <p class="sarcastic-subtitle">Tu corteza prefrontal tiene trabajo.</p>
+            </header>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-value" id="ui-streak">0</span>
+                    <span class="stat-label">Racha (Días)</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="ui-record">0</span>
+                    <span class="stat-label">Récord Histórico</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="ui-hours">0.0</span>
+                    <span class="stat-label">Horas Totales</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="ui-protectors">0</span>
+                    <span class="stat-label">Protectores</span>
+                </div>
+            </div>
+
+            <button id="btn-start" class="btn-primary">EMPEZAR</button>
+            <p class="motivational-text">Hoy vas a saber algo que ayer no sabías.</p>
+        </div>
+
+        <!-- Pantalla de Ruleta -->
+        <div id="screen-roulette" class="screen hidden">
+            <h2>Buscando tu misión...</h2>
+            <div class="roulette-container">
+                <span id="roulette-category" class="category-tag">Seleccionando categoría...</span>
+                <div id="roulette-display" class="roulette-box">...</div>
+            </div>
+        </div>
+
+        <!-- Pantalla de Sesión Activa -->
+        <div id="screen-session" class="screen hidden">
+            <div class="session-header">
+                <span id="session-category" class="category-tag">Categoría</span>
+                <h2 id="session-topic">Tema</h2>
+            </div>
+            
+            <div class="timer-container">
+                <div id="timer-display">00:00</div>
+                <p class="timer-subtitle">45 minutos. Sobrevivirás.</p>
+            </div>
+
+            <div class="session-actions">
+                <button id="btn-complete" class="btn-success hidden">COMPLETAR SESIÓN</button>
+                <button id="btn-abandon" class="btn-danger">ABANDONAR</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
